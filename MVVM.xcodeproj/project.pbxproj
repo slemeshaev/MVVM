@@ -60,9 +60,9 @@
 		6661FABD297B159500C299C2 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				6674276F297C75DE00CB66E2 /* ViewModel */,
 				6661FAD4297B15EB00C299C2 /* Model */,
 				6661FAD9297B167400C299C2 /* View */,
+				6674276F297C75DE00CB66E2 /* ViewModel */,
 				6661FADA297B1AE100C299C2 /* Utilities */,
 			);
 			path = MVVM;
