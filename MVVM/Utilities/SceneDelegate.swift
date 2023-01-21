@@ -14,8 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        let userViewController = UserViewController()
         window = UIWindow(windowScene: scene)
+        
+        let model = UserModel(name: "John", surname: "Smith", friendCount: 206)
+        let viewModel = UserViewModelImpl(userModel: model)
+        let userViewController = UserViewController()
+        
+        userViewController.viewModel = viewModel
+        
         window?.rootViewController = userViewController
         window?.makeKeyAndVisible()
     }
