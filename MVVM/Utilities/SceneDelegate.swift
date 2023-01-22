@@ -16,13 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let model = UserModel(name: "John", surname: "Smith", friendCount: 206)
-        let viewModel = UserViewModelImpl(userModel: model)
-        let userViewController = UserViewController()
+        let viewModel = CodeInputViewModelImpl(model: CodeInputModelImpl())
+        let codeInputViewController = CodeInputViewController()
         
-        userViewController.viewModel = viewModel
+        codeInputViewController.viewModel = viewModel
         
-        window?.rootViewController = userViewController
+        window?.rootViewController = codeInputViewController
         window?.makeKeyAndVisible()
     }
     

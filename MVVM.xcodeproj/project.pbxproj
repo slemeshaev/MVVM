@@ -15,6 +15,10 @@
 		6661FAD7297B166B00C299C2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661FAD5297B166B00C299C2 /* UserViewController.swift */; };
 		6661FAD8297B166B00C299C2 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6661FAD6297B166B00C299C2 /* UserViewController.xib */; };
 		66742771297C75FD00CB66E2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742770297C75FD00CB66E2 /* UserViewModel.swift */; };
+		66E7B56A297D6B7700552863 /* CodeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7B568297D6B7700552863 /* CodeInputViewController.swift */; };
+		66E7B56B297D6B7700552863 /* CodeInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E7B569297D6B7700552863 /* CodeInputViewController.xib */; };
+		66E7B56D297D6EB200552863 /* CodeInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7B56C297D6EB200552863 /* CodeInputModel.swift */; };
+		66E7B56F297D70B500552863 /* CodeInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7B56E297D70B500552863 /* CodeInputViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		6661FAD5297B166B00C299C2 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		6661FAD6297B166B00C299C2 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		66742770297C75FD00CB66E2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		66E7B568297D6B7700552863 /* CodeInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputViewController.swift; sourceTree = "<group>"; };
+		66E7B569297D6B7700552863 /* CodeInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeInputViewController.xib; sourceTree = "<group>"; };
+		66E7B56C297D6EB200552863 /* CodeInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputModel.swift; sourceTree = "<group>"; };
+		66E7B56E297D70B500552863 /* CodeInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				6661FAD2297B15DB00C299C2 /* UserModel.swift */,
+				66E7B56C297D6EB200552863 /* CodeInputModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6661FADB297B1B6F00C299C2 /* User */,
+				66E7B567297D6B3500552863 /* CodeInput */,
 				6661FADC297B1B7A00C299C2 /* Launch */,
 			);
 			path = View;
@@ -117,8 +127,18 @@
 			isa = PBXGroup;
 			children = (
 				66742770297C75FD00CB66E2 /* UserViewModel.swift */,
+				66E7B56E297D70B500552863 /* CodeInputViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66E7B567297D6B3500552863 /* CodeInput */ = {
+			isa = PBXGroup;
+			children = (
+				66E7B568297D6B7700552863 /* CodeInputViewController.swift */,
+				66E7B569297D6B7700552863 /* CodeInputViewController.xib */,
+			);
+			path = CodeInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +202,7 @@
 			files = (
 				6661FACB297B159700C299C2 /* LaunchScreen.storyboard in Resources */,
 				6661FAD8297B166B00C299C2 /* UserViewController.xib in Resources */,
+				66E7B56B297D6B7700552863 /* CodeInputViewController.xib in Resources */,
 				6661FAC8297B159700C299C2 /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,9 +216,12 @@
 			files = (
 				6661FAD7297B166B00C299C2 /* UserViewController.swift in Sources */,
 				6661FABF297B159500C299C2 /* AppDelegate.swift in Sources */,
+				66E7B56F297D70B500552863 /* CodeInputViewModel.swift in Sources */,
+				66E7B56A297D6B7700552863 /* CodeInputViewController.swift in Sources */,
 				6661FAD3297B15DB00C299C2 /* UserModel.swift in Sources */,
 				66742771297C75FD00CB66E2 /* UserViewModel.swift in Sources */,
 				6661FAC1297B159500C299C2 /* SceneDelegate.swift in Sources */,
+				66E7B56D297D6EB200552863 /* CodeInputModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
