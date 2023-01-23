@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6660DB77297DB04A00042A33 /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = 6660DB76297DB04A00042A33 /* Bond */; };
 		6661FABF297B159500C299C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661FABE297B159500C299C2 /* AppDelegate.swift */; };
 		6661FAC1297B159500C299C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661FAC0297B159500C299C2 /* SceneDelegate.swift */; };
 		6661FAC8297B159700C299C2 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6661FAC7297B159700C299C2 /* AppIcon.xcassets */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6660DB77297DB04A00042A33 /* Bond in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = MVVM;
+			packageProductDependencies = (
+				6660DB76297DB04A00042A33 /* Bond */,
+			);
 			productName = MVVM;
 			productReference = 6661FABB297B159500C299C2 /* MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +191,9 @@
 				Base,
 			);
 			mainGroup = 6661FAB2297B159500C299C2;
+			packageReferences = (
+				6660DB75297DB04A00042A33 /* XCRemoteSwiftPackageReference "Bond" */,
+			);
 			productRefGroup = 6661FABC297B159500C299C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -431,6 +439,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6660DB75297DB04A00042A33 /* XCRemoteSwiftPackageReference "Bond" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DeclarativeHub/Bond.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6660DB76297DB04A00042A33 /* Bond */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6660DB75297DB04A00042A33 /* XCRemoteSwiftPackageReference "Bond" */;
+			productName = Bond;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6661FAB3297B159500C299C2 /* Project object */;
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 class CodeInputViewController: UIViewController {
     // MARK: - IBOutlets
@@ -34,10 +35,7 @@ class CodeInputViewController: UIViewController {
     
     // MARK: - Private
     private func fillData() {
-        titleLabel.text = viewModel?.title
-        submitButton.isEnabled = viewModel?.submitButtonEnabled ?? false
-        viewModel?.submitButtonEnabledChanged = { [unowned self] (enabled) in
-            submitButton.isEnabled = enabled
-        }
+        viewModel?.title.bind(to: titleLabel)
+        viewModel?.submitButtonEnabled.bind(to: submitButton.reactive.isEnabled)
     }
 }

@@ -6,12 +6,12 @@
 //  Copyright © 2023 slemeshaev. All rights reserved.
 //
 
+import Bond
 import Foundation
 
 protocol CodeInputViewModel {
-    var title: String { get }
-    var submitButtonEnabled: Bool { get }
-    var submitButtonEnabledChanged: ((Bool) -> ())? { get set }
+    var title: Observable<String> { get }
+    var submitButtonEnabled: Observable<Bool> { get }
     
     func handleCodeChanged(_ code: String)
 }
@@ -20,25 +20,19 @@ class CodeInputViewModelImpl: CodeInputViewModel {
     // MARK: - Init
     init(model: CodeInputModel) {
         self.model = model
+        self.title.value = "Enter a \(model.codeLength)-character code"
     }
     
     // MARK: - Properties
     private let model: CodeInputModel
     
     // MARK: - CodeInputViewModel
-    var title: String {
-        return "Enter a \(model.codeLength)-character code"
-    }
-    
-    var submitButtonEnabled: Bool = false {
-        didSet {
-            submitButtonEnabledChanged?(submitButtonEnabled)
-        }
-    }
+    var title = Observable<String>("")
+    var submitButtonEnabled = Observable<Bool>(false)
     
     var submitButtonEnabledChanged: ((Bool) -> ())?
     
     func handleCodeChanged(_ code: String) {
-        submitButtonEnabled = model.isCodeValid(code)
+        submitButtonEnabled.value = model.isCodeValid(code)
     }
 }
