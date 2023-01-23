@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol CodeInputViewModel {
     var title: String { get }
-    var submitButtonEnabled: Bool { get }
-    var submitButtonEnabledChanged: ((Bool) -> ())? { get set }
+    var submitButtonEnabled: BehaviorSubject<Bool> { get }
     
     func handleCodeChanged(_ code: String)
 }
@@ -30,15 +30,9 @@ class CodeInputViewModelImpl: CodeInputViewModel {
         return "Enter a \(model.codeLength)-character code"
     }
     
-    var submitButtonEnabled: Bool = false {
-        didSet {
-            submitButtonEnabledChanged?(submitButtonEnabled)
-        }
-    }
-    
-    var submitButtonEnabledChanged: ((Bool) -> ())?
+    var submitButtonEnabled: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     
     func handleCodeChanged(_ code: String) {
-        submitButtonEnabled = model.isCodeValid(code)
+        submitButtonEnabled.onNext(model.isCodeValid(code))
     }
 }

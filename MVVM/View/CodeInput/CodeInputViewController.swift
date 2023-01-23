@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CodeInputViewController: UIViewController {
     // MARK: - IBOutlets
@@ -15,6 +17,8 @@ class CodeInputViewController: UIViewController {
     @IBOutlet weak private var submitButton: UIButton!
     
     // MARK: - Properties
+    private let disposeBag = DisposeBag()
+    
     var viewModel: CodeInputViewModel?
     
     // MARK: - Lifecycle
@@ -35,9 +39,6 @@ class CodeInputViewController: UIViewController {
     // MARK: - Private
     private func fillData() {
         titleLabel.text = viewModel?.title
-        submitButton.isEnabled = viewModel?.submitButtonEnabled ?? false
-        viewModel?.submitButtonEnabledChanged = { [unowned self] (enabled) in
-            submitButton.isEnabled = enabled
-        }
+        viewModel?.submitButtonEnabled.bind(to: submitButton.rx.isEnabled).disposed(by: disposeBag)
     }
 }
