@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66577BFB29E3024C00AE744C /* ListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66577BFA29E3024C00AE744C /* ListObject.swift */; };
+		66577BFD29E305F400AE744C /* ColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66577BFC29E305F400AE744C /* ColorViewModel.swift */; };
+		66577C0729E35E7300AE744C /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66577C0529E35E7300AE744C /* ColorsTableViewCell.swift */; };
+		6657E582298060B6000E0787 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657E580298060B6000E0787 /* ColorsViewController.swift */; };
 		6661FABF297B159500C299C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661FABE297B159500C299C2 /* AppDelegate.swift */; };
 		6661FAC1297B159500C299C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661FAC0297B159500C299C2 /* SceneDelegate.swift */; };
 		6661FAC8297B159700C299C2 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6661FAC7297B159700C299C2 /* AppIcon.xcassets */; };
@@ -15,9 +19,15 @@
 		6661FAD7297B166B00C299C2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661FAD5297B166B00C299C2 /* UserViewController.swift */; };
 		6661FAD8297B166B00C299C2 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6661FAD6297B166B00C299C2 /* UserViewController.xib */; };
 		66742771297C75FD00CB66E2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742770297C75FD00CB66E2 /* UserViewModel.swift */; };
+		668B575A2984664900AFE25D /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B57592984664900AFE25D /* ListModel.swift */; };
+		66BFB60E29EBE75700D75D70 /* ColorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BFB60D29EBE75700D75D70 /* ColorsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66577BFA29E3024C00AE744C /* ListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListObject.swift; sourceTree = "<group>"; };
+		66577BFC29E305F400AE744C /* ColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewModel.swift; sourceTree = "<group>"; };
+		66577C0529E35E7300AE744C /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
+		6657E580298060B6000E0787 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		6661FABB297B159500C299C2 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6661FABE297B159500C299C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6661FAC0297B159500C299C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +38,8 @@
 		6661FAD5297B166B00C299C2 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		6661FAD6297B166B00C299C2 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		66742770297C75FD00CB66E2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		668B57592984664900AFE25D /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		66BFB60D29EBE75700D75D70 /* ColorsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6657E57D2980600F000E0787 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				6657E580298060B6000E0787 /* ColorsViewController.swift */,
+				66577C0529E35E7300AE744C /* ColorsTableViewCell.swift */,
+				66BFB60D29EBE75700D75D70 /* ColorsTableViewCell.xib */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		6661FAB2297B159500C299C2 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				6661FAD2297B15DB00C299C2 /* UserModel.swift */,
+				66577BFA29E3024C00AE744C /* ListObject.swift */,
+				668B57592984664900AFE25D /* ListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6661FADB297B1B6F00C299C2 /* User */,
+				6657E57D2980600F000E0787 /* Colors */,
 				6661FADC297B1B7A00C299C2 /* Launch */,
 			);
 			path = View;
@@ -117,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				66742770297C75FD00CB66E2 /* UserViewModel.swift */,
+				66577BFC29E305F400AE744C /* ColorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6661FACB297B159700C299C2 /* LaunchScreen.storyboard in Resources */,
+				66BFB60E29EBE75700D75D70 /* ColorsTableViewCell.xib in Resources */,
 				6661FAD8297B166B00C299C2 /* UserViewController.xib in Resources */,
 				6661FAC8297B159700C299C2 /* AppIcon.xcassets in Resources */,
 			);
@@ -197,7 +224,12 @@
 				6661FABF297B159500C299C2 /* AppDelegate.swift in Sources */,
 				6661FAD3297B15DB00C299C2 /* UserModel.swift in Sources */,
 				66742771297C75FD00CB66E2 /* UserViewModel.swift in Sources */,
+				668B575A2984664900AFE25D /* ListModel.swift in Sources */,
+				6657E582298060B6000E0787 /* ColorsViewController.swift in Sources */,
+				66577BFB29E3024C00AE744C /* ListObject.swift in Sources */,
 				6661FAC1297B159500C299C2 /* SceneDelegate.swift in Sources */,
+				66577BFD29E305F400AE744C /* ColorViewModel.swift in Sources */,
+				66577C0729E35E7300AE744C /* ColorsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +367,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
@@ -362,7 +393,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5GWB2H668N;

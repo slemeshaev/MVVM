@@ -10,8 +10,8 @@ import UIKit
 
 class UserViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet weak private var userNameLabel: UILabel!
-    @IBOutlet weak private var friendsCountLabel: UILabel!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var friendsCountLabel: UILabel!
     
     // MARK: - Properties
     var viewModel: UserViewModel?
